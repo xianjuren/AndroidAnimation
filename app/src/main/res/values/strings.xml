@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">animation</string>
+    <string name="view_animation">View Animation</string>
+    <string name="frame_animation">Frame Animation</string>
+    <string name="property_animation">Property Animation</string>
+    <string name="normal_view_animation">normal view animation</string>
+    <string name="special_view_animation">special view animation</string>
+    <string name="flicker_view">flicker view</string>
+    <string name="rotating_circle_view">rotating circle view</string>
+    <string name="overturn_view">overturn</string>
+    <string name="scale_view">scale</string>
+    <string name="install">install</string>
 </resources>

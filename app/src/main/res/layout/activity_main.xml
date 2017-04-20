@@ -1,18 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.animation.animation.MainActivity">
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
+        style="@style/view_animation_item"
+        android:onClick="viewAnimation"
+        android:text="@string/view_animation"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/view_Animation_content_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
-</RelativeLayout>
+        android:background="@color/view_animation_green"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/view_animation_item"
+            android:onClick="normalViewAnimation"
+            android:text="@string/normal_view_animation"
+            />
+
+        <TextView
+            style="@style/view_animation_item"
+            android:onClick="specialViewAnimation"
+            android:text="@string/special_view_animation"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/view_animation_item"
+        android:onClick="frameAnimation"
+        android:text="@string/frame_animation"
+        />
+
+    <TextView
+        style="@style/view_animation_item"
+        android:onClick="propertyAnimation"
+        android:text="@string/property_animation"
+        />
+</LinearLayout>

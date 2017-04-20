@@ -3,4 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="view_animation_item_text_color">#333333</color>
+    <color name="view_animation_green">#9b9b9b</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="conversation_pressed">#F2F2F2</color>
+    <color name="install_btn_bg">#FFFF9900</color>
+    <color name="install_btn_bg_pressed">#FF8400</color>
 </resources>
