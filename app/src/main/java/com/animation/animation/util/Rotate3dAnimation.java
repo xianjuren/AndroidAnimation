@@ -40,7 +40,6 @@ public class Rotate3dAnimation extends Animation {
         if(currentDegrees==mPreDegrees){
             return;
         }
-        System.out.println("=============刷新度数=====" + currentDegrees + "=======mFromDegrees===" + mFromDegrees + "====interpolatedTime===" + interpolatedTime);
         Matrix matrix = t.getMatrix();
         mCamera.save();
         if (mReverse) {
@@ -71,7 +70,5 @@ public class Rotate3dAnimation extends Animation {
     public void initialize(int width, int height, int parentWidth, int parentHeight) {
         super.initialize(width, height, parentWidth, parentHeight);
         mCamera = new Camera();
-        mPivotY = height / 2;
-        mPivotX = width / 2;
     }
 }

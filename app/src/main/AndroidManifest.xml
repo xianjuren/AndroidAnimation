@@ -22,8 +22,18 @@
             android:name=".activity.FlickerViewActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name=".activity.RotateViewActivity"
-                  android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.RotateViewActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <activity
+            android:name=".activity.SpecialViewAnimationActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.OverrideActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

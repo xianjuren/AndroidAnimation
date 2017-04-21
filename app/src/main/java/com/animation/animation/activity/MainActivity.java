@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void specialViewAnimation(View view) {
-
+        startActivity(new Intent(this, SpecialViewAnimationActivity.class));
     }
 
     public void frameAnimation(View view) {

@@ -10,4 +10,7 @@
     <string name="overturn_view">overturn</string>
     <string name="scale_view">scale</string>
     <string name="install">install</string>
+    <string name="activity_animation">activity animation</string>
+    <string name="layout_animation">layout animation</string>
+    <string name="test_info">activity animation</string>
 </resources>
