@@ -1,4 +1,4 @@
-package com.animation.animation.util;
+package com.animation.animation.utils;
 
 import android.graphics.Camera;
 import android.graphics.Matrix;

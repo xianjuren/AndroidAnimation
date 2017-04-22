@@ -3,6 +3,7 @@ package com.animation.animation.adpter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SimpleItemAnimator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,9 @@ import android.widget.TextView;
 
 import com.animation.animation.R;
 import com.animation.animation.bean.Coupon;
+import com.animation.animation.utils.SlideItemAnimator;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,10 +25,14 @@ import java.util.List;
 public class FlickerAdapter extends RecyclerView.Adapter {
 
     Animation mAnimation;
+
+    SlideItemAnimator mItemAnimator;
+    List<RecyclerView.ViewHolder> mViewHolders;
     private List<Coupon> mCoupons;
 
     public FlickerAdapter(Context context) {
         mAnimation = AnimationUtils.loadAnimation(context, R.anim.flicker_view);
+        mViewHolders = new ArrayList<>();
     }
 
     @Override
@@ -34,17 +41,24 @@ public class FlickerAdapter extends RecyclerView.Adapter {
         return new FlickerViewHolder(mView);
     }
 
+
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-
         FlickerViewHolder mHolder = (FlickerViewHolder) holder;
         if (null != mCoupons && null != mCoupons.get(position)) {
             mHolder.mTvPrice.setText(mCoupons.get(position).getPrice());
             mHolder.mTvCouponName.setText(mCoupons.get(position).getKind());
             mHolder.imageView.setVisibility(View.GONE);
-            if (!mCoupons.get(position).isFirstShow() && position == 0) {
-                mHolder.imageView.setVisibility(View.VISIBLE);
-                startAnimation(mHolder.imageView);
+            if (!mCoupons.get(position).isFirstShow()) {
+                if (position == 0) {
+                    mHolder.imageView.setVisibility(View.VISIBLE);
+                    startAnimation(mHolder.imageView);
+                }
+                mHolder.itemView.setVisibility(View.GONE);
+                mViewHolders.add(mHolder);
+                if (position == mCoupons.size() - 1) {
+                    mItemAnimator.addAllViewHolder(mViewHolders);
+                }
             } else {
                 mHolder.imageView.setVisibility(View.GONE);
             }
@@ -70,6 +84,23 @@ public class FlickerAdapter extends RecyclerView.Adapter {
 
     public void setData(List<Coupon> coupons) {
         mCoupons = coupons;
+        notifyDataSetChanged();
+    }
+
+    public void removePosition() {
+        if (mCoupons != null && mCoupons.size() > 0) {
+            try {
+                notifyItemRemoved(0);
+                mCoupons.remove(0);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+
+    public void setItemAnimator(SlideItemAnimator itemAnimator) {
+        mItemAnimator = itemAnimator;
     }
 
     private class FlickerViewHolder extends RecyclerView.ViewHolder {

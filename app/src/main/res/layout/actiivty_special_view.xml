@@ -12,11 +12,14 @@
         />
 
     <TextView
+        android:id="@+id/tv_layout_animation"
         style="@style/view_animation_item"
         android:onClick="layoutAnimation"
         android:text="@string/layout_animation"
         />
 
+    <!--只有在创建时才会执行layoutAnimation  -->
+    <!--android:layoutAnimation="@anim/layout_animation"-->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycle_view_layout"
         android:layout_width="match_parent"
