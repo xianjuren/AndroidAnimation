@@ -35,6 +35,14 @@
         <activity
             android:name=".activity.OverrideActivity"
             android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.FrameAnimationActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.Rotate3dViewActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

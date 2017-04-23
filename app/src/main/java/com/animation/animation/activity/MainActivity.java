@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        //设置沉浸式状态栏
+//        //设置沉浸式状态栏或者自定义Theme
 //        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 //
 //            //透明状态栏
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void frameAnimation(View view) {
-
+        startActivity(new Intent(this, FrameAnimationActivity.class));
     }
 
     public void propertyAnimation(View view) {

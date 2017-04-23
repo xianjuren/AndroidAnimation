@@ -15,4 +15,5 @@
     <string name="test_info">activity animation</string>
     <string name="start_layout_animation">start layout animation</string>
     <string name="end_layout_animation">end layout animation</string>
+    <string name="rotating_3d">rotating 3d view</string>
 </resources>

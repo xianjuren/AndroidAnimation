@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 
 
 import com.animation.animation.R;
-import com.animation.animation.utils.Rotate3dAnimation;
+import com.animation.animation.animation.Rotate3dAnimation;
 
 
 /**

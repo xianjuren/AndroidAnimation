@@ -20,4 +20,9 @@
         />
 
 
+    <TextView
+        style="@style/view_animation_item"
+        android:onClick="rotate3d"
+        android:text="@string/rotating_3d"
+        />
 </LinearLayout>

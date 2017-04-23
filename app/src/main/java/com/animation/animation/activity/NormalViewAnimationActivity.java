@@ -28,6 +28,11 @@ public class NormalViewAnimationActivity extends BaseBackActivity {
         startActivity(new Intent(this, RotateViewActivity.class));
     }
 
+
+    public void rotate3d(View view ){
+        startActivity(new Intent(this, Rotate3dViewActivity.class));
+    }
+
     @Override
     int getContentLayoutId() {
         return R.layout.activity_normal_view_animation;
