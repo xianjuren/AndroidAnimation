@@ -16,4 +16,8 @@
     <string name="start_layout_animation">start layout animation</string>
     <string name="end_layout_animation">end layout animation</string>
     <string name="rotating_3d">rotating 3d view</string>
+    <string name="text">text</string>
+    <string name="picture">picture</string>
+    <string name="next">next</string>
+    <string name="prev">prev</string>
 </resources>

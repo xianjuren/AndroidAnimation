@@ -46,7 +46,7 @@ public class RotateViewActivity extends BaseBackActivity {
         mAdAnimation = AnimationUtils.loadAnimation(this, R.anim.ad_show);
         mAdAnimation.setInterpolator(new BounceInterpolator());
 
-        mRotate3dAnimation = new Rotate3dAnimation(Rotate3dAnimation.Rotate_X, 90, 0, mAdLayout.getWidth() / 2, mAdLayout.getHeight() / 2, 0, true);
+        mRotate3dAnimation = new Rotate3dAnimation(Rotate3dAnimation.Rotate_X, -90, 0, mAdLayout.getWidth() / 2, mAdLayout.getHeight() / 2, 0, true);
         mRotate3dAnimation.setFillAfter(true);
         mRotate3dAnimation.setDuration(800);
         mRotate3dAnimation.setInterpolator(new LinearInterpolator());

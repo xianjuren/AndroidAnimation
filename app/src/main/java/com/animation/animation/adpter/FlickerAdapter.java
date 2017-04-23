@@ -54,10 +54,12 @@ public class FlickerAdapter extends RecyclerView.Adapter {
                     mHolder.imageView.setVisibility(View.VISIBLE);
                     startAnimation(mHolder.imageView);
                 }
-                mHolder.itemView.setVisibility(View.GONE);
-                mViewHolders.add(mHolder);
-                if (position == mCoupons.size() - 1) {
-                    mItemAnimator.addAllViewHolder(mViewHolders);
+                if(null!=mItemAnimator){
+                    mHolder.itemView.setVisibility(View.GONE);
+                    mViewHolders.add(mHolder);
+                    if (position == mCoupons.size() - 1) {
+                        mItemAnimator.addAllViewHolder(mViewHolders);
+                    }
                 }
             } else {
                 mHolder.imageView.setVisibility(View.GONE);

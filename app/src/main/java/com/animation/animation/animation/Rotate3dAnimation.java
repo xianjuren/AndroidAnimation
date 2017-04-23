@@ -37,15 +37,13 @@ public class Rotate3dAnimation extends Animation {
 
         final float fromDegrees = mFromDegrees;
         float currentDegrees = fromDegrees + (mToDegrees - fromDegrees) * interpolatedTime;
-        if(currentDegrees==mPreDegrees){
-            return;
-        }
+
         Matrix matrix = t.getMatrix();
         mCamera.save();
         if (mReverse) {
-            mCamera.translate(0.0f, 0.0f, mPivotZ * interpolatedTime);
+            mCamera.translate(0.0f, mPivotY * interpolatedTime, 0.0f);
         } else {
-            mCamera.translate(0.0f, 0.0f, mPivotZ * (1.0f - interpolatedTime));
+            mCamera.translate(0.0f,  mPivotY * (1.0f - interpolatedTime), 0.0f);
         }
         switch (mRotateDirection) {
             case Rotate_X:
@@ -62,7 +60,6 @@ public class Rotate3dAnimation extends Animation {
         mCamera.restore();
         matrix.preTranslate(-mPivotX, -mPivotY);
         matrix.postTranslate(mPivotX, mPivotY);
-        mPreDegrees = currentDegrees;
     }
 
 

@@ -4,37 +4,38 @@
                 android:layout_height="match_parent"
     >
 
-    <com.animation.animation.view.Custom3DView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        >
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/photo1"
-            />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/photo2"
-            />
+        <TextView
+            style="@style/view_animation_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:onClick="picture"
+            android:text="@string/picture"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/photo3"
-            />
+        <TextView
+            style="@style/view_animation_item"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:onClick="text"
+            android:text="@string/text"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/photo4"
-            />
-    </com.animation.animation.view.Custom3DView>
+    </LinearLayout>
+
+
+    <include
+        layout="@layout/picture_3d"/>
+
+    <include
+        layout="@layout/text_3d"/>
 
 </RelativeLayout>

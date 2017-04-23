@@ -25,7 +25,7 @@ public class FrameAnimationActivity extends BaseBackActivity {
 //        mImageView.setBackgroundResource(R.drawable.frame_side_to_right);
 //        mAnimationDrawable = (AnimationDrawable) mImageView.getBackground();
 //        mAnimationDrawable.start();
-        
+
         //监听帧动画，可以通过计算执行动画的时间来处触发逻辑
         ListenerAnimationDrawable listenerAnimationDrawable = new ListenerAnimationDrawable((AnimationDrawable) getResources().getDrawable(R.drawable.frame_side_to_right)) {
             @Override
