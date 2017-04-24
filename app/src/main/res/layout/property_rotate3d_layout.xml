@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/property_rotate3d_tv"
+        style="@style/view_animation_item"
+        android:onClick="propertyRotate3d"
+        android:text="@string/property_rotating_3d"
+        />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/property_rotate3d_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/property_rotate3d_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:src="@drawable/photo2"
+            android:visibility="gone"
+            />
+
+        <com.animation.animation.view.CustomImage3dVIew
+            android:id="@+id/property_rotate3d_custom_iv"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

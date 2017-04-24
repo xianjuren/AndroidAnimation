@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <include
+        layout="@layout/property_flicker_layout"/>
+
+
+    <TextView
+        style="@style/view_animation_item"
+        android:onClick="propertyRotate"
+        android:text="@string/property_rotate"
+        />
+
+
+    <include
+        layout="@layout/property_rotate3d_layout"/>
+
+
+    <TextView
+        style="@style/view_animation_item"
+        android:onClick="layoutTransition"
+        android:text="@string/property_layout_animation"
+        />
+
+    <TextView
+        style="@style/view_animation_item"
+        android:onClick="customTypeEvaluator"
+        android:text="@string/property_type_evaluator"
+        />
+</LinearLayout>

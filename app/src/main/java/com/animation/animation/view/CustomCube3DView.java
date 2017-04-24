@@ -16,7 +16,7 @@ import android.widget.Scroller;
  * Created by Jone on 17/4/23.
  */
 
-public class Custom3DView extends ViewGroup {
+public class CustomCube3DView extends ViewGroup {
 
     private Camera mCamera;
     private Matrix mMatrix;
@@ -35,15 +35,15 @@ public class Custom3DView extends ViewGroup {
     private static final int STATE_NORMAL = 2;
     private int STATE = -1;
     private float resistance = 1.6f;//滑动阻力
-    public Custom3DView(Context context) {
+    public CustomCube3DView(Context context) {
         this(context,null);
     }
 
-    public Custom3DView(Context context, AttributeSet attrs) {
+    public CustomCube3DView(Context context, AttributeSet attrs) {
         this(context, attrs,0);
     }
 
-    public Custom3DView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CustomCube3DView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
@@ -127,6 +127,8 @@ public class Custom3DView extends ViewGroup {
             drawScreen(canvas,i,getDrawingTime());
         }
     }
+
+
 
 
     /**

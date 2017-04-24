@@ -20,4 +20,9 @@
     <string name="picture">picture</string>
     <string name="next">next</string>
     <string name="prev">prev</string>
+    <string name="property_flicker">flicker</string>
+    <string name="property_rotate">synthesized attribute</string>
+    <string name="property_rotating_3d">rotating_3d</string>
+    <string name="property_layout_animation">layoutTransition</string>
+    <string name="property_type_evaluator">customTypeEvaluator</string>
 </resources>

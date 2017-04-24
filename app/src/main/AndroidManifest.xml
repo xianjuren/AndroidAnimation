@@ -43,6 +43,10 @@
         <activity
             android:name=".activity.Rotate3dViewActivity"
             android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.PropertyAnimationActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

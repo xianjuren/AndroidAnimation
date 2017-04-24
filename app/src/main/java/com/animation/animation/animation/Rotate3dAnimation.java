@@ -41,9 +41,9 @@ public class Rotate3dAnimation extends Animation {
         Matrix matrix = t.getMatrix();
         mCamera.save();
         if (mReverse) {
-            mCamera.translate(0.0f, mPivotY * interpolatedTime, 0.0f);
+            mCamera.translate(0.0f, 0.0f, mPivotZ * interpolatedTime);
         } else {
-            mCamera.translate(0.0f,  mPivotY * (1.0f - interpolatedTime), 0.0f);
+            mCamera.translate(0.0f, 0.0f, mPivotZ * (1.0f - interpolatedTime));
         }
         switch (mRotateDirection) {
             case Rotate_X:

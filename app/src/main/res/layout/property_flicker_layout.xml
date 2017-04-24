@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        style="@style/view_animation_item"
+        android:onClick="propertyFlicker"
+        android:text="@string/property_flicker"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/property_flicker_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/view_animation_green"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/property_flicker_text"
+            style="@style/view_animation_item"
+            android:gravity="center_horizontal"
+            android:text="白日依山尽，黄河入海流"
+            />
+
+        <ImageView
+            android:id="@+id/property_flicker_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/liuguang"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
