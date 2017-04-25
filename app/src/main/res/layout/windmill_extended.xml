@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/clean_icons_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/view_animation_green"
+                android:visibility="invisible"
+    >
+
+    <LinearLayout
+        android:id="@+id/icons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:id="@+id/windmill_extended_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:id="@+id/windmill_left"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/windmill_icon"/>
+
+        <View
+            android:id="@+id/view_extended_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/windmill_right"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/windmill_icon"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/windmill_bg"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/windmill_extended_layout"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="-21dp"
+        android:src="@drawable/windmill_extended_background"
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>

@@ -3,11 +3,10 @@ package com.animation.animation.activity;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.View;
-import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.OvershootInterpolator;
 import android.widget.ImageView;
@@ -16,7 +15,6 @@ import android.widget.TextView;
 
 import com.animation.animation.R;
 import com.animation.animation.utils.DensityUtil;
-import com.animation.animation.utils.StringUtil;
 import com.animation.animation.view.CustomImage3dVIew;
 
 /**
@@ -90,8 +88,8 @@ public class PropertyAnimationActivity extends BaseBackActivity {
         });
     }
 
-    public void propertyRotate(View view) {
-
+    public void propertyRotate(View view) {//synthesized attribute
+        startActivity(new Intent(this,SynthesizedAttributeActivity.class));
     }
 
 
@@ -127,7 +125,7 @@ public class PropertyAnimationActivity extends BaseBackActivity {
             public void onAnimationUpdate(ValueAnimator animation) {
                 //以外部参照为“公转”，在控件自转的时候添加一个同步的位移效果（如下y轴），这样整体效果看起来像是控件在绕侧边旋转一样。
                 float degrees = (float) animation.getAnimatedValue();
-                //旋转180，滚动一个pictureHeight
+                //旋转180，滚动一个Height
                 int n = (int) (degrees / 180);
                 double cons = Math.cos(Math.toRadians(degrees - n * 180));
                 float transY = (float) ((1 + -cons) * pictureHeight) / 2 + n * pictureHeight;

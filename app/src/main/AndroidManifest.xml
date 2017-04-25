@@ -47,6 +47,10 @@
         <activity
             android:name=".activity.PropertyAnimationActivity"
             android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.SynthesizedAttributeActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
