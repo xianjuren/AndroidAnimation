@@ -1,7 +1,7 @@
 package com.animation.animation.view.typeEvalueator;
 
 import android.animation.TypeEvaluator;
-import android.util.Log;
+
 
 import com.animation.animation.bean.CirclePoint;
 

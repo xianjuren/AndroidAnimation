@@ -31,4 +31,17 @@
         android:onClick="customTypeEvaluator"
         android:text="@string/property_type_evaluator"
         />
+
+    <TextView
+        style="@style/view_animation_item"
+        android:onClick="customPropertyName"
+        android:text="@string/property_name"
+        />
+
+    <TextView
+        style="@style/view_animation_item"
+        android:onClick="keyFrame"
+        android:text="@string/key_frame"
+        />
+
 </LinearLayout>

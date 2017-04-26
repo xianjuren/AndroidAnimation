@@ -89,7 +89,7 @@ public class PropertyAnimationActivity extends BaseBackActivity {
     }
 
     public void propertyRotate(View view) {//synthesized attribute
-        startActivity(new Intent(this,SynthesizedAttributeActivity.class));
+        startActivity(new Intent(this, SynthesizedAttributeActivity.class));
     }
 
 
@@ -117,7 +117,7 @@ public class PropertyAnimationActivity extends BaseBackActivity {
     private void initAnimationRate3d(final View view) {
         //效果不是特别理想，需要把执行时间设置较长
         final float pictureHeight = DensityUtil.dpToPx(this, 100);
-        objectAnimatorRota3d = ObjectAnimator.ofFloat(mImageView3d, "rotationX", 0, 180,270,360);
+        objectAnimatorRota3d = ObjectAnimator.ofFloat(mImageView3d, "rotationX", 0, 180, 270, 360);
         objectAnimatorRota3d.setDuration(6000);
         objectAnimatorRota3d.setInterpolator(new OvershootInterpolator());
         objectAnimatorRota3d.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -135,11 +135,19 @@ public class PropertyAnimationActivity extends BaseBackActivity {
     }
 
     public void layoutTransition(View view) {
-
+        startActivity(new Intent(this, LayoutTransitionActivity.class));
     }
 
     public void customTypeEvaluator(View view) {
-            startActivity(new Intent(this,CustomTypeEvaluatorActivity.class));
+        startActivity(new Intent(this, CustomTypeEvaluatorActivity.class));
+    }
+
+    public void customPropertyName(View view) {
+        startActivity(new Intent(this, CustomPropertyNameActivity.class));
+    }
+
+    public void keyFrame(View view){
+        startActivity(new Intent(this, KeyframeActivity.class));
     }
 
     @Override

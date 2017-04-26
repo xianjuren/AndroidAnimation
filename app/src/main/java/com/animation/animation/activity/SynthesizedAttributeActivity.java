@@ -119,7 +119,7 @@ public class SynthesizedAttributeActivity extends BaseBackActivity {
                     mCleanLayout.setVisibility(View.GONE);
                     mAdLayout.setVisibility(View.VISIBLE);
                     PropertyValuesHolder adX = PropertyValuesHolder.ofFloat("scaleX", 0, 1);
-                    PropertyValuesHolder adY = PropertyValuesHolder.ofFloat("scaleY", 0,  1);
+                    PropertyValuesHolder adY = PropertyValuesHolder.ofFloat("scaleY", 0, 1);
                     ObjectAnimator mAD = ObjectAnimator.ofPropertyValuesHolder(mAdLayout, adX, adY).setDuration(1000);
                     mAD.setInterpolator(new BounceInterpolator());
                     mAD.start();

@@ -55,6 +55,18 @@
         <activity
             android:name=".activity.CustomTypeEvaluatorActivity"
             android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.CustomPropertyNameActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.LayoutTransitionActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.KeyframeActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

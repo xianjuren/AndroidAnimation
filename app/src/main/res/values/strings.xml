@@ -25,4 +25,8 @@
     <string name="property_rotating_3d">rotating_3d</string>
     <string name="property_layout_animation">layoutTransition</string>
     <string name="property_type_evaluator">customTypeEvaluator</string>
+    <string name="property_name">custom propertyName</string>
+    <string name="add_view">add view</string>
+    <string name="remove_view">remove view</string>
+    <string name="key_frame">key frame</string>
 </resources>
