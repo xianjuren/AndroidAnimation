@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.animation.animation.R;
-import com.animation.animation.animation.ListenerAnimationDrawable;
+import com.animation.animation.view.animation.ListenerAnimationDrawable;
 
 /**
  * Created by Jone on 17/4/23.

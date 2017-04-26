@@ -51,6 +51,10 @@
         <activity
             android:name=".activity.SynthesizedAttributeActivity"
             android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.CustomTypeEvaluatorActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

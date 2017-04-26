@@ -1,4 +1,4 @@
-package com.animation.animation.animation;
+package com.animation.animation.view.animation;
 
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Handler;

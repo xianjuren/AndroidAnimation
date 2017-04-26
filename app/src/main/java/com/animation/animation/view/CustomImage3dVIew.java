@@ -98,7 +98,6 @@ public class CustomImage3dVIew extends ImageView {
             mCamera.rotateY(deltaX);
         } else {
             mCamera.rotateX(mDegrees);;
-           ;
             mCamera.translate(0f,0f,30*(1-mPercent));
         }
         mCamera.getMatrix(mMatrix);
