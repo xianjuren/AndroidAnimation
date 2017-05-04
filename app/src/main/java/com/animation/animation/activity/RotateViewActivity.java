@@ -2,6 +2,7 @@ package com.animation.animation.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -39,19 +40,39 @@ public class RotateViewActivity extends BaseBackActivity {
         mWindmillLayout.setVisibility(View.VISIBLE);
         mCircleBg.setVisibility(View.VISIBLE);
         mCircleBg.startAnimation(mCircleBgAnimation);
+        mCircleBg.post(new Runnable() {
+            @Override
+            public void run() {
+                int width = mCircleBg.getMeasuredWidth();
+                int height = mCircleBg.getMeasuredHeight();
+                Log.i("测量1====宽高=====", width + "========height===" + height);
+            }
+        });
         mWindmillScale = AnimationUtils.loadAnimation(this, R.anim.rotate_windmill_scale);
         mWindmillRotate = AnimationUtils.loadAnimation(this, R.anim.rotate_windill_rotate);
         mWindmillRotate.setInterpolator(new LinearInterpolator());
         mWindmillHide = AnimationUtils.loadAnimation(this, R.anim.windmill_hide);
         mAdAnimation = AnimationUtils.loadAnimation(this, R.anim.ad_show);
         mAdAnimation.setInterpolator(new BounceInterpolator());
+        setListener();
+    }
 
-        mRotate3dAnimation = new Rotate3dAnimation(Rotate3dAnimation.Rotate_X, -90, 0, mAdLayout.getWidth() / 2, mAdLayout.getHeight() / 2, 0, true);
+    private void startRotate3dAnimation() {
+        mRotate3dAnimation = new Rotate3dAnimation(Rotate3dAnimation.Rotate_Y, 0, 180, mAdLayout.getWidth() / 2, mAdLayout.getHeight() / 2, 1.0f, true);
         mRotate3dAnimation.setFillAfter(true);
         mRotate3dAnimation.setDuration(800);
         mRotate3dAnimation.setInterpolator(new LinearInterpolator());
-        setListener();
+        mAdLayout.startAnimation(mRotate3dAnimation);
+    }
 
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            int width = mCircleBg.getMeasuredWidth();
+            int height = mCircleBg.getMeasuredHeight();
+            Log.i("测量2====宽高=====", width + "========height===" + height);
+        }
     }
 
     private void setListener() {
@@ -99,8 +120,9 @@ public class RotateViewActivity extends BaseBackActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 mWindmillLayout.setVisibility(View.GONE);
+
                 if (isOverturn) {
-                    mAdLayout.startAnimation(mRotate3dAnimation);
+                    startRotate3dAnimation();
                 } else {
                     mAdLayout.startAnimation(mAdAnimation);
                 }

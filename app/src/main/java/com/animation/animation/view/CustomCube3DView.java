@@ -93,6 +93,8 @@ public class CustomCube3DView extends ViewGroup {
         scrollTo(0,mStartScreen * mHeight);
     }
 
+
+
     //布局子控件：
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {

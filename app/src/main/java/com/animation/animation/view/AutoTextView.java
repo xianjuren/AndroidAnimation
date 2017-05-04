@@ -6,6 +6,7 @@ import android.graphics.Camera;
 import android.graphics.Matrix;
 import android.util.AttributeSet;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
@@ -72,6 +73,12 @@ public class AutoTextView extends TextSwitcher implements ViewSwitcher.ViewFacto
         return rotation;
     }
 
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        
+        return super.dispatchKeyEvent(event);
+    }
+
     //这里返回的TextView，就是我们看到的View
     @Override
     public View makeView() {
@@ -99,6 +106,8 @@ public class AutoTextView extends TextSwitcher implements ViewSwitcher.ViewFacto
             setOutAnimation(mOutUp);
         }
     }
+
+
 
     class Rotate3dAnimation extends Animation {
         private final float mFromDegrees;

@@ -24,6 +24,7 @@ public abstract class BaseBackActivity extends AppCompatActivity {
         Toolbar mToolbar = (Toolbar) findViewById(R.id.base_activity_toolbar);
         setSupportActionBar(mToolbar);
         mToolbar.setTitleTextColor(Color.WHITE);
+        // 给左上角图标的左边加上一个返回的图标 。对应ActionBar.DISPLAY_HOME_AS_UP
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(getActivityTitle());
         getSupportActionBar().setHomeAsUpIndicator(R.mipmap.back);
@@ -34,6 +35,14 @@ public abstract class BaseBackActivity extends AppCompatActivity {
             }
         });
 
+        //不必添加的方法
+        //左上角的图标是否可以点击
+        getSupportActionBar().setHomeButtonEnabled(true);
+        //使左上角图标是否显示
+        //Android.R.id.home，对应ActionBar.DISPLAY_SHOW_HOME
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+//// 使自定义的普通View能在title栏显示
+        getSupportActionBar().setDisplayShowCustomEnabled(true);
     }
 
     abstract int getContentLayoutId();
